@@ -3,10 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GithubSearchComponent } from './github-search/github-search.component';
+import { GithubsearchFormComponent } from './githubsearch-form/githubsearch-form.component';
+import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearch-profile.component';
+import { GithubsearchProfileCardComponent } from './githubsearch-profile-card/githubsearch-profile-card.component';
+import { GithubsearchProfileDataComponent } from './githubsearch-profile-data/githubsearch-profile-data.component';
+import { GithubsearchReposComponent } from './githubsearch-repos/githubsearch-repos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubSearchComponent,
+    GithubsearchFormComponent,
+    GithubsearchProfileComponent,
+    GithubsearchProfileCardComponent,
+    GithubsearchProfileDataComponent,
+    GithubsearchReposComponent
   ],
   imports: [
     BrowserModule,
