@@ -27,6 +27,10 @@ getdata() {
 getProfileRepos() {
     return this.http.get("https://api.github.com/users/" + this.userName + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
   }
+  // get update
+updateProfile(userName: string) {
+    this.userName = userName;
+  }
     // return this.HttpClient.get<any>[](dataUrl).pipe(
     //   retry(count..1)
     //   catchErrors(this.handleErrors)
