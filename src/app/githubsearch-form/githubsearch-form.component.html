@@ -1,6 +1,6 @@
-<form action="" class="form-inline">
+<form action="" class="form-inline" (submit)="searchUser()">
     <div class="form-group">
-        <input type="search" class="form-control" placeholder="github user">
+        <input [(ngModel)]="githubUserQuery" type="search" name="user" size="40" class="form-control" placeholder="github user">
     </div>
     <div class="submit-button">
         <input type="submit" class="btn btn-secondary btn-sm" value="submit">

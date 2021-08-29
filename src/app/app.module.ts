@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {FormsModule, } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
@@ -9,6 +10,7 @@ import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearc
 import { GithubsearchProfileCardComponent } from './githubsearch-profile-card/githubsearch-profile-card.component';
 import { GithubsearchProfileDataComponent } from './githubsearch-profile-data/githubsearch-profile-data.component';
 import { GithubsearchReposComponent } from './githubsearch-repos/githubsearch-repos.component';
+import {Github-service} from './github-service/github-service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,12 @@ import { GithubsearchReposComponent } from './githubsearch-repos/githubsearch-re
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [Github-service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-search.component.css']
 })
 export class GithubSearchComponent implements OnInit {
-  search = "GitHub-Search"
+  public GithubUserQuery: string,
+
+
 
   constructor() { }
+
+  public searchUser(){
+
+  }
 
   ngOnInit(): void {
   }
