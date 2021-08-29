@@ -1,7 +1,7 @@
 <div class="container" style="padding-top: 10px; background-color: darkkhaki;">
 
     <div *ngIf="profile" class="card-group" style="display: flex;">
-        <div class="card" style="background-color: darkkhaki;">
+        <div class="card" style="background-color: orange;">
             <div class="card-body" style="float: right">
                 <h5 class="card-title"><b>PROFILE</b></h5>
                 <img class="card-img-top" src="{{ profile.avatar_url }}" style="border-radius: 100%; width: 15em; height: 15em; float: left" responsive />
@@ -27,7 +27,7 @@
         </p>
       </div>
     </div>
-    <div class="card" style="background-color: darkkhaki;">
+    <div class="card" style="background-color: cadetblue;">
       <div class="card-body">
         <h5 class="card-title"><b>REPOSITORIES</b></h5>
         <div class="panel-heading" *ngFor="let repo of repos">

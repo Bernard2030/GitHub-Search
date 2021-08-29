@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
  import { GithubsearchFormComponent } from './githubsearch-form/githubsearch-form.component';
 import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearch-profile.component';
 import { GithubsearchReposComponent } from './githubsearch-repos/githubsearch-repos.component';
-import {GithubServiveSearvice } from './githubServiveSearvice';
+import { GithubServiceService } from './github-service.service';
 
 @NgModule({
   declarations: [
