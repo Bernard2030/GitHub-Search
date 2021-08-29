@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./githubsearch-form.component.css']
 })
 export class GithubsearchFormComponent implements OnInit {
+  userName: string;
+  findProfile:any;
 
   constructor() { }
 

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GithubServiceService } from '../github-service.service';
+import { HttpClient } from '@angular/common/http';
+import {Users} from '../users'
 
 @Component({
   selector: 'app-githubsearch-profile',
@@ -8,38 +10,38 @@ import { GithubServiceService } from '../github-service.service';
 })
 export class GithubsearchProfileComponent implements OnInit {
 
-  profile:any;
+  userName:string ;
+  profile:any ;
+  repos:any;
 
 
-  repos: any[];
-  username: string;
-  constructor(private profileservice: GithubServiceService) {
-    this.profileservice.getdata().subscribe((profile: any[]) => {
+
+
+
+
+ constructor(private GithubServiceService: GithubServiceService) {
+    this.GithubServiceService.getdata().subscribe((profile: any[]) => {
       console.log(profile);
       this.profile = profile;
     });
-    this.profileservice.getProfileRepos().subscribe((repos: any[]) => {
+    this.GithubServiceService.getProfileRepos().subscribe((repos: any[]) => {
       console.log(repos);
       this.repos = repos;
     });
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
   findProfile() {
-    this.profileservice.updateProfile(this.username);
-    this.profileservice.getdata().subscribe((profile: any[]) => {
+    this.GithubServiceService.updateProfile(this.userName);
+    this.GithubServiceService.getdata().subscribe((profile: any[]) => {
       console.log(profile);
       this.profile = profile;
     });
-    this.profileservice.getProfileRepos().subscribe((repos: any[]) => {
+    this.GithubServiceService.getProfileRepos().subscribe((repos: any[]) => {
       console.log(repos);
       this.repos = repos;
     });
-
-
-
-  // @Input() githubSearchProfile:any;
-
   }
-  ngOnInit() {}
-
 
 }

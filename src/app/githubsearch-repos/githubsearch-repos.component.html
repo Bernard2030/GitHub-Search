@@ -1,13 +1,13 @@
-<!-- <div *ngIf="githubsearchrepos" class="card-mt-3"> -->
+<div class="card-mt-3">
 
-<div class="card-header bg-light text-white">
-    <h4>Github Repositories</h4>
+    <div class="card-header bg-light text-white">
+        <h4>Github Repositories</h4>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li *ngFor="let repo of repos" class="list-group-item">
+                <a [href]="repo.htm_url" class="text-promary font-weight-bold" target="_blank">{{repo.name}}</a> href="{{ repo.html_url }}"
+            </li>
+        </ul>
+    </div>
 </div>
-<div class="card-body">
-    <ul class="list-group">
-        <li *ngFor="let repo of repos" class="list-group-item">
-            <a [href]="repo.htm_url" class="text-promary font-weight-bold" target="_blank">{{repo.name}}</a>
-        </li>
-    </ul>
-</div>
-<!-- </div> -->
