@@ -23,24 +23,25 @@ getdata() {
 
 
   // git hub repos
-  getProfile():Observable<any>[]{
-    let dataUrl = "https://api.github.com/users/${}?clientId=${clientId}&clientSecret=${clientSecret}"
 
-    return this.HttpClient.get<any>[](dataUrl).pipe(
-      retry(count..1)
-      catchErrors(this.handleErrors)
-      );
+getProfileRepos() {
+    return this.http.get("https://api.github.com/users/" + this.userName + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
   }
-  public handleErrors(errors:HttpErrorResponse){
-    let errorMessage:string;
-    if (error.error instanceof Error ErrorEvent){
-      // client side errors
-      errorMessage =`MESSAGE:${error.error.message}`;
-    }else{
-      // server side errors
-      errorMessage = `STATUS:${error.status} MESSAGE:${error.message}`;
-    }
-    return throwError(errorMessage);
+    // return this.HttpClient.get<any>[](dataUrl).pipe(
+    //   retry(count..1)
+    //   catchErrors(this.handleErrors)
+    //   );
   }
-}
+  // public handleErrors(errors:HttpErrorResponse){
+  //   let errorMessage:string;
+  //   if (error.error instanceof Error ErrorEvent){
+  //     // client side errors
+  //     errorMessage =`MESSAGE:${error.error.message}`;
+  //   }else{
+  //     // server side errors
+  //     errorMessage = `STATUS:${error.status} MESSAGE:${error.message}`;
+  //   }
+  //   return throwError(errorMessage);
+
+
 

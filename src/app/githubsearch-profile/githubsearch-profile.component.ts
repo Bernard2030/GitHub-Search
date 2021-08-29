@@ -7,10 +7,37 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GithubsearchProfileComponent implements OnInit {
 
-  @Input() githubSearchProfile:any;
-  constructor() { }
 
-  ngOnInit(): void {
+  repos: any[];
+  username: string;
+  constructor(private profileservice: ProfileService) {
+    this.profileservice.getdata().subscribe((profile: any[]) => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.profileservice.getProfileRepos().subscribe((repos: any[]) => {
+      console.log(repos);
+      this.repos = repos;
+    });
+  }
+  findProfile() {
+    this.profileservice.updateProfile(this.username);
+    this.profileservice.getdata().subscribe((profile: any[]) => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.profileservice.getProfileRepos().subscribe((repos: any[]) => {
+      console.log(repos);
+      this.repos = repos;
+    });
+
+
+
+  // @Input() githubSearchProfile:any;
+
+
+  ngOnInit() {
   }
 
+}
 }
