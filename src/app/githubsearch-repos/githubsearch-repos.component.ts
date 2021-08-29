@@ -9,7 +9,7 @@ import { GithubServiceService } from '../github-service.service';
 export class GithubsearchReposComponent implements OnInit {
 
   repos:any;
-  // profile:any;
+  
 
 
   constructor(private GithubServiceService: GithubServiceService) {

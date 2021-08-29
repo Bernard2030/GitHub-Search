@@ -30,7 +30,7 @@ export class GithubsearchProfileComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    throw new Error('Use the correct Format.');
   }
   findProfile() {
     this.GithubServiceService.updateProfile(this.userName);
