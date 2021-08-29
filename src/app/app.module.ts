@@ -10,7 +10,6 @@ import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearc
 import { GithubsearchProfileCardComponent } from './githubsearch-profile-card/githubsearch-profile-card.component';
 import { GithubsearchProfileDataComponent } from './githubsearch-profile-data/githubsearch-profile-data.component';
 import { GithubsearchReposComponent } from './githubsearch-repos/githubsearch-repos.component';
-import {Github-service} from './github-service/github-service';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,7 @@ import {Github-service} from './github-service/github-service';
     HttpClientModule,
 
   ],
-  providers: [Github-service],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

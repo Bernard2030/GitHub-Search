@@ -9,8 +9,8 @@ import { GithubServiceService } from '../github-service.service';
 export class GithubSearchComponent implements OnInit {
 
   public GithubUserQuery: string;
-  public GithubProfile:any;
-  public GithubRepos:any[];
+  public GithubsearchProfile:any;
+  public GithubsearchRepos:any[];
   public errorMessage:string;
 
 
