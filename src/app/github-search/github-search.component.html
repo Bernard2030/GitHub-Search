@@ -18,10 +18,22 @@
                     <h3>GitHub User Search</h3>
                 </div>
                 <div class="card-body">
-                    <app-githubsearch-form> </app-githubsearch-form>
+                    <app-githubsearch-form></app-githubsearch-form>
                 </div>
 
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <pre>
+      <app-githubsearch-profile [githubSearchProfile]="githubSearchProfile"></app-githubsearch-profile>
+        </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-github-repos></app-github-repos>
         </div>
     </div>
 </div>

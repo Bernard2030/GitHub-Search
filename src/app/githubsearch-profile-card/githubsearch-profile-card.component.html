@@ -1,1 +1,8 @@
-<p>githubsearch-profile-card works!</p>
+<div class="card">
+    <img [src]="githubSearchProfile.url" class="img-fluid" height="200">
+    <div class="card-body">
+        <h4 class="card-title">{{gihubsearchProfile.name}}</h4>
+        <p class="card-text">{{githubsearchProfile.bio}}</p>
+        <a [href]="gihubsearchProfile.html url" target="_blank" class="btn btn-primary">User Profile</a>
+    </div>
+</div>

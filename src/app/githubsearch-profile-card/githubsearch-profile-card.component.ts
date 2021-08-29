@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./githubsearch-profile-card.component.css']
 })
 export class GithubsearchProfileCardComponent implements OnInit {
-
+  @input() githubsearchProfile:any;
   constructor() { }
 
   ngOnInit(): void {
