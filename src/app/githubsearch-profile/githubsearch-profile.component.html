@@ -1,4 +1,4 @@
-<div class="container-fluid mt-3">
+<div *ngIf="githubsearchProfile" class="container mt-3">
     <div class="row">
         <div class="col-md-3">
             <app-githubsearch-profile-card [githubSearchProfile]="githubSearchProfile"></app-githubsearch-profile-card>

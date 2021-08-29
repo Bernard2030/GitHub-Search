@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubsearchReposComponent implements OnInit {
 
-  constructor() { }
+  @Input() githubsearchRepos:any[];
+ constructor() { }
 
   ngOnInit(): void {
   }
