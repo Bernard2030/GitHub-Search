@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class GithubServiceService {
 
-  userName: string
+  userName: any
   clientId:"f40879a2ac5fd345874f";
   clientSecret:"f339dd10e7ffb86c6007442d141d2e383dc4c2bd";
 
@@ -30,9 +30,8 @@ constructor(private http: HttpClient) {
   getProfileRepos() {
     return this.http.get("https://api.github.com/users/" + this.userName + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
   }
-  updateProfile(useNname: string) {
-    this.userName = useNname;
+  updateProfile(userNname: string) {
+    this.userName = userNname;
   }
 }
-
 

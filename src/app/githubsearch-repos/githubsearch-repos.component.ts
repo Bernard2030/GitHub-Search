@@ -7,6 +7,9 @@ import { GithubServiceService } from '../github-service.service';
   styleUrls: ['./githubsearch-repos.component.css']
 })
 export class GithubsearchReposComponent implements OnInit {
+  getdata() {
+    throw new Error('Method not implemented.');
+  }
 
   repos:any;
   

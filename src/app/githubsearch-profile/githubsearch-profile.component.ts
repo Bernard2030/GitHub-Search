@@ -30,10 +30,10 @@ export class GithubsearchProfileComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    throw new Error('Use the correct Format.');
+    // throw new Error('Use the correct Format.');
   }
-  findProfile() {
-    this.GithubServiceService.updateProfile(this.userName);
+  findProfile(userSearchEmit: string) {
+    this.GithubServiceService.updateProfile(userSearchEmit);
     this.GithubServiceService.getdata().subscribe((profile: any[]) => {
       console.log(profile);
       this.profile = profile;
@@ -42,6 +42,10 @@ export class GithubsearchProfileComponent implements OnInit {
       console.log(repos);
       this.repos = repos;
     });
+  }
+  githubSearch(userSearchEmit: any){
+    console.log(userSearchEmit)
+    this.findProfile(userSearchEmit)
   }
 
 }

@@ -1,12 +1,13 @@
+<app-githubsearch-form (userSearchEmit)= 'githubSearch($event)'></app-githubsearch-form>
+<br><br>
 <div class="container">
-
-    <div *ngIf="profile" class="card-group" style="display: flex;">
-        <div class="card" style="background-color: orange;">
-            <div class="card-body" style="float: right">
-                <h5 class="card-title"><b>User Profile</b></h5>
-                <img class="card-img-top" src="{{ profile.avatar_url }}" style="border-radius: 100%; width: 16em; height: 20em; float: left" responsive />
-                <div>
-                    <b>Name:</b> {{ profile.name }}<br /><strong>UserName:</strong
+<div *ngIf="profile" class="card-group" style="display: flex;">
+    <div class="card" style="background-color: orange;">
+        <div class="card-body" style="float: right">
+            <h5 class="card-title"><b>User Profile</b></h5>
+            <img class="card-img-top" src="{{ profile.avatar_url }}" style="border-radius: 100%; width: 16em; height: 20em; float: left" responsive />
+            <div>
+                <b>Name:</b> {{ profile.name }}<br /><strong>UserName:</strong
           ><small>{{ profile.login }}</small>
         </div>
         <div *ngIf="profile.email">
