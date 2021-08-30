@@ -1,3 +1,5 @@
+# Angular GitHub Search
+The project allows you to search for your user name in Github and also see the number of Repos.
 # GitHubSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
@@ -21,7 +23,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
+## Technologies Used
+* HTML
+* CSS
+* Bootsrap
+* javaScript
+* TypeScript
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on how to use the App; you can reach out to:
+brobernard.254@gmail.com.
